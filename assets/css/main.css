@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Spline Sans Mono";
+  src: url("~/assets/fonts/spline-sans-mono/SplineSansMono-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Spline Sans Mono";
+  src: url("~/assets/fonts/spline-sans-mono/SplineSansMono-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 125 950;
+  font-stretch: 75% 125%;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Tailwind Styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Custom Colors
+ */
+
+@layer base {
+  :root {
+    --color-black: #111119;
+    --color-white: #e0e2ee;
+    --color-grey: #c0c2ce;
+
+    --color-fantasy-orange: #fe8d24;
+    --color-fantasy-yellow: #fef524;
+    --color-fantasy-green: #24fe6e;
+    --color-fantasy-blue: #24d0fe;
+    --color-fantasy-pink: #df24fe;
+  }
+}
+
+/* Main Styles */
+body {
+  @apply font-spline bg-black text-grey font-light leading-normal;
+}
+
+* {
+  @apply relative focus:outline-none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-medium;
+}
+
+h1 {
+  @apply text-7xl md:text-8xl text-white;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl text-white;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+h4 {
+  @apply text-lg;
+}
+
+a {
+  @apply transition-colors ease-in-out duration-500 text-white;
+
+  &.router-link-exact-active {
+    @apply text-fantasy-pink;
+  }
+}
+
+/* Custom Classes */
+.comment-decorator {
+  @apply before:content-['/\*'] before:text-fantasy-orange before:pr-2 after:content-['*/'] after:text-fantasy-orange after:pl-2;
+}
+.dash-decorator {
+  @apply before:content-['>>'] before:text-fantasy-yellow before:pr-2;
+}
+.hash-decorator {
+  @apply before:content-['#'] before:text-fantasy-pink before:pr-2;
+}
