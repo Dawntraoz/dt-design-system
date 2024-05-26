@@ -15,6 +15,7 @@ export default <Partial<Config>>{
       },
       colors: {
         black: "var(--color-black)",
+        'black-light': "var(--color-black-light)",
         white: "var(--color-white)",
         grey: "var(--color-grey)",
         fantasy: {

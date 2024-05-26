@@ -30,6 +30,7 @@
 @layer base {
   :root {
     --color-black: #111119;
+    --color-black-light: #1e1e24;
     --color-white: #e0e2ee;
     --color-grey: #c0c2ce;
 
