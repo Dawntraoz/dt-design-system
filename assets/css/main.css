@@ -29,22 +29,22 @@
 
 @layer base {
   :root {
-    --color-black: #111119;
-    --color-black-light: #1e1e24;
-    --color-white: #e0e2ee;
-    --color-grey: #c0c2ce;
+    --color-black: 23 21 29;
+    --color-black-light: 33 26 41;
+    --color-white: 224 226 238;
+    --color-grey: 192 194 206;
 
-    --color-fantasy-orange: #fe8d24;
-    --color-fantasy-yellow: #fef524;
-    --color-fantasy-green: #24fe6e;
-    --color-fantasy-blue: #24d0fe;
-    --color-fantasy-pink: #df24fe;
+    --color-fantasy-orange: 254 141 36;
+    --color-fantasy-yellow: 254 245 36;
+    --color-fantasy-green: 36 254 110;
+    --color-fantasy-blue: 36 208 254;
+    --color-fantasy-pink: 223 36 254;
   }
 }
 
 /* Main Styles */
 body {
-  @apply font-spline bg-black text-grey font-light leading-normal;
+  @apply font-spline bg-black-light p-4 text-grey font-light leading-normal overflow-hidden;
 }
 
 * {

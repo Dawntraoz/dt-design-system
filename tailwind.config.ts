@@ -14,20 +14,22 @@ export default <Partial<Config>>{
         spline: "Spline Sans Mono, monospace",
       },
       colors: {
-        black: "var(--color-black)",
-        'black-light': "var(--color-black-light)",
-        white: "var(--color-white)",
-        grey: "var(--color-grey)",
+        black: {
+          DEFAULT: "rgb(var(--color-black) / <alpha-value>)",
+          light: "rgb(var(--color-black-light) / <alpha-value>)",
+        },
+        white: "rgb(var(--color-white) / <alpha-value>)",
+        grey: "rgb(var(--color-grey) / <alpha-value>)",
         fantasy: {
-          orange: "var(--color-fantasy-orange)",
-          yellow: "var(--color-fantasy-yellow)",
-          green: "var(--color-fantasy-green)",
-          blue: "var(--color-fantasy-blue)",
-          pink: "var(--color-fantasy-pink)",
+          orange: "rgb(var(--color-fantasy-orange) / <alpha-value>)",
+          yellow: "rgb(var(--color-fantasy-yellow) / <alpha-value>)",
+          green: "rgb(var(--color-fantasy-green) / <alpha-value>)",
+          blue: "rgb(var(--color-fantasy-blue) / <alpha-value>)",
+          pink: "rgb(var(--color-fantasy-pink) / <alpha-value>)",
         },
       },
       backgroundImage: {
-        "fantasy-gradient": `linear-gradient(-45deg, var(--color-fantasy-orange) 0%, var(--color-fantasy-yellow) 25%, var(--color-fantasy-green) 50%, var(--color-fantasy-blue) 75%, var(--color-fantasy-pink) 100%)`,
+        "fantasy-gradient": `linear-gradient(-45deg, rgb(var(--color-fantasy-orange)) 0%, rgb(var(--color-fantasy-yellow)) 25%, rgb(var(--color-fantasy-green)) 50%, rgb(var(--color-fantasy-blue)) 75%, rgb(var(--color-fantasy-pink)) 100%)`,
       },
       animation: {
         wiggle: "wiggle .5s ease-in-out infinite",
